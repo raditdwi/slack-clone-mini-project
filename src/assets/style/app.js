@@ -143,3 +143,72 @@ export const SidebarOptionChannel = styled.h3`
     padding: 10px 0;
     font-weight: 300;
 `
+
+// Chat Section
+export const ChatContainer = styled.section`
+    flex: 0.7;
+    flex-grow: 1;
+    overflow-y: scroll;
+    margin-top: 60px;
+`
+export const ChatHeader = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid lightgray;
+`
+export const HeaderChatLeft = styled.div`
+    display: flex;
+    align-items: center;
+    > h4 {
+        display: flex;
+        text-transform: lowercase;
+    }
+    > .MuiSvgIcon-root {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+`
+export const HeaderChatRight = styled.div`
+    > p {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+    }
+    > p > .MuiSvgIcon-root {
+        margin-right: 3px;
+        font-size: 18px;
+    }
+`
+export const ChatMessages = styled.div`
+
+`
+
+export const ChatInputContainer = styled.div `
+    border-radius: 20px;
+
+    > form {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    > form > input {
+        position: fixed;
+        bottom: 30px;
+        width: 60%;
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        padding: 20px;
+        outline: none;
+    }
+    > form > input::placeholder {
+        font-family: "Poppins", sans-serif;
+    }
+    > form > button {
+        display: none;
+    }
+`
+
+export const MessageContainer = styled.div`
+
+`

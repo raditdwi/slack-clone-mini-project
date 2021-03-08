@@ -4,6 +4,7 @@ import { AppBody } from 'assets/style/app';
 
 import Header from 'components/Header';
 import Sidebar from 'components/Sidebar';
+import Chat from 'components/Chat';
 
 export default function Homepage() {
     return (
@@ -14,6 +15,7 @@ export default function Homepage() {
                 <Switch>
                     <Route exact path="/">
                         {/* Chat */}
+                        <Chat />
                     </Route>
                 </Switch>
             </AppBody>    
