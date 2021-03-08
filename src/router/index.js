@@ -1,13 +1,11 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
-import HomePage from 'views/Landing'
+import Homepage from 'views/Homepage'
 export default function Router() {
     return (
         <BrowserRouter>
-            <Switch>
-                <Route exact path="/" component={HomePage}/>
-            </Switch>
+            <Homepage />
         </BrowserRouter>
     )
 }
