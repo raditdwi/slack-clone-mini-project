@@ -16,14 +16,19 @@ import AddIcon from '@material-ui/icons/Add';
 import SidebarOption from 'components/SidebarOptions';
 import { SidebarContainer, SidebarHeader, SidebarInfo } from 'assets/style/app';
 import { useCollection } from 'react-firebase-hooks/firestore';
-import { db } from '../firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { db, auth } from '../firebase';
+
 export default function Sidebar() {
-    const [channels, loading, error] = useCollection(db.collection('rooms'))
+    const [channels] = useCollection(db.collection('rooms'))
+    const [user] = useAuthState(auth)
+
+    // console.log('user is', user)
     return (
         <SidebarContainer>
             <SidebarHeader>
                 <SidebarInfo>
-                    <h2>Rades Pratama</h2>
+                    <h2>{user?.displayName}</h2>
                     <h3>
                         <FiberManualRecordIcon />
                         Hmm, not bad

@@ -4,8 +4,8 @@
 }
 body {
   --slack-color: #3f0f40;
-  overflow: hidden;
-
+  --slack-font: "Poppins", sans-serif;
+  overflow: hidden;  
   margin: 0;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -51,7 +51,7 @@ export const HeaderSearch = styled.div `
         color: white;
     }
     > ::placeholder {
-        font-family: "Poppins", sans-serif;
+        font-family: var(--slack-font);
     }
 `;
 export const HeaderRight = styled.div `
@@ -184,7 +184,6 @@ export const HeaderChatRight = styled.div`
 export const ChatMessages = styled.div`
 
 `
-
 export const ChatInputContainer = styled.div `
     border-radius: 20px;
 
@@ -203,13 +202,12 @@ export const ChatInputContainer = styled.div `
         outline: none;
     }
     > form > input::placeholder {
-        font-family: "Poppins", sans-serif;
+        font-family: var(--slack-font);
     }
     > form > button {
         display: none;
     }
 `
-
 export const MessageContainer = styled.div`
     display: flex;
     align-items: center;
@@ -231,4 +229,56 @@ export const MessageInfo = styled.div`
 `
 export const ChatBottom = styled.div `
     padding-bottom: 200px;
+`
+
+// Login Page
+export const LoginContainer = styled.section`
+    background-color: #f8f8f8;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+`
+export const LoginInnerContainer = styled.div`
+    padding: 100px 50px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0, .12), 0 1px 2px rgba(0,0,0, .12);
+
+    > img {
+        object-fit: contain;
+        height: 100px;
+        margin-bottom: 40px;
+    }
+    > button {
+        font-family: var(--slack-font);
+        margin-top: 50px;
+        text-transform: inherit;
+        background-color: #0a8d48;
+        color: white;
+        transition: .5s;
+    }
+    > button:hover {
+        color: var(--slack-color);
+    }
+`
+// Loading Screen
+export const AppLoading = styled.div `
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+`
+export const AppLoadingContents = styled.div `
+    text-align: center;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > img {
+        height: 100px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
 `
