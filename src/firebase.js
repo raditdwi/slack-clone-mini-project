@@ -2,7 +2,7 @@ import firebase from 'firebase'
 
 const firebaseConfig = {
     apiKey: "AIzaSyBTDW5yRgtJw9MMl-xt8WVxQpJ5DxTYM68",
-    authDomain: "slack-clone-personal.firebaseapp.com",
+    authDomain: "devlits-slack-clone.vercel.app",
     projectId: "slack-clone-personal",
     storageBucket: "slack-clone-personal.appspot.com",
     messagingSenderId: "861374579048",
