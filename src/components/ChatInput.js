@@ -4,7 +4,7 @@ import firebase from 'firebase'
 import { ChatInputContainer } from 'assets/style/app';
 import { Button } from '@material-ui/core';
 import { db } from '../firebase'
-export default function ChatInput({ channelName, channelId }) {
+export default function ChatInput({ channelName, channelId, chatRef }) {
     const [input, setInput] = useState("")
 
     function sendMessage(e){
@@ -20,7 +20,11 @@ export default function ChatInput({ channelName, channelId }) {
             userImage: 'https://dl.dropbox.com/s/h6ml25qsxk6rv12/cbimage.jpg?dl=0'
         })
 
-        setInput('')
+        chatRef.current.scrollIntoView({
+            behavior: "smooth"
+        });
+
+        setInput("")
     }
 
     return (
